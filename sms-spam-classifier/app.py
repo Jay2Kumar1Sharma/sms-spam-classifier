@@ -7,6 +7,12 @@ from nltk.stem.porter import PorterStemmer
 
 ps = PorterStemmer()
 
+try:
+    # Check if the 'punkt' resource is available
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    # If not available, download it
+    nltk.download('punkt')
 
 def transform_text(text):
     text = text.lower()
