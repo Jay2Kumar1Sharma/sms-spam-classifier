@@ -14,6 +14,8 @@ except LookupError:
     # If not available, download it
     nltk.download('punkt')
 
+nltk.download('punkt_tab')
+
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
